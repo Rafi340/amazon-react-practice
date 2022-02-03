@@ -1,14 +1,12 @@
-
-import { useState } from 'react/cjs/react.development';
+import React, { useState } from 'react';
 import fakeData from '../../ema-john-simple-resources/fakeData';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
-const shop = () => {
+const Shop = () => {
     const first10=fakeData.slice(0,10);
    const [products, setProducts]= useState(first10);
    const [cart, setCart]=useState([]);
-
    const handleAddProduct = (product) =>{
         const newCart =[...cart,product];
         setCart(newCart);
@@ -31,4 +29,4 @@ const shop = () => {
     );
 };
 
-export default shop;
+export default Shop;
