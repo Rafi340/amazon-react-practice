@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Button} from 'react-bootstrap';
 const Cart = (props) => {
     const cart=props.cart;
    // const total=cart.reduce((total, prd) => total+prd.price,0)
@@ -30,14 +30,14 @@ const Cart = (props) => {
    }
     return (
         <div>
-            <h4>Order Summary</h4>
+            <h4 className="text-danger">Order Summary</h4>
             <p>Ordered Item:{cart.length}</p>
             <p>Product Price: {formatNumber(total)}</p>
             <p><small>shipping Cost:{shipping}</small></p>
             
             <p><small>tax + vat: {tax}</small></p>
             <p>Total Price:{grandTotal}</p>
-            
+            <Button>Confirm Order</Button>
         </div>
     );
 };
