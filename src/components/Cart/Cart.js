@@ -1,5 +1,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import './Cart.css';
 const Cart = (props) => {
     const cart=props.cart;
    // const total=cart.reduce((total, prd) => total+prd.price,0)
@@ -38,6 +40,13 @@ const Cart = (props) => {
             <p><small>tax + vat: {tax}</small></p>
             <p>Total Price:{grandTotal}</p>
             <Button>Confirm Order</Button>
+            <br/>
+            
+            <Link to="./OrderReview"> 
+            <Button className="review-button"variant="info">Review Order</Button>
+            
+             </Link>
+            
         </div>
     );
 };
